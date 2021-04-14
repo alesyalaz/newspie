@@ -18,7 +18,7 @@ from flask import (Flask, make_response, redirect, render_template, request,
 
 CONFIG = configparser.ConfigParser()
 CONFIG.read('config.ini')
-API_KEY = os.environ.get('NEWS_API_KEY')
+API_KEY = os.environ.get('NEWS_API_KEY') or '87a33682f0fc4efa9f36e2336b721304'
 TOP_HEADLINES = CONFIG['ENDPOINTS']['TOP_HEADLINES']
 EVERYTHING = CONFIG['ENDPOINTS']['EVERYTHING']
 PAGE_SIZE = int(CONFIG['VARIOUS']['PAGE_SIZE'])
